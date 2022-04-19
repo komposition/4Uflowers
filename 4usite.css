@@ -12,9 +12,6 @@
    }
 }
 
-nav {
-    float: right;
-}
 nav ul {
     list-style: none;
     margin: 0;
@@ -140,7 +137,22 @@ nav ul li ul li a {
     font-size: 50px;
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     color:white;
-    position: relative;
     margin: auto;
-    top:330px;
 }
+
+h3 {
+    font-size: 50px;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: slategray;
+}
+
+/*other*/
+
+.headerbar {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebbdb5;
+    margin-bottom: 20px;
+  }
