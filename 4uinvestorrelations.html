@@ -29,11 +29,32 @@
         #bplan {
           padding: 20px;
           font-size: 20pt;
-          color: rgb(161, 5, 5);
+          color: #ebbdb5;
           background-color: whitesmoke;
           font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
           position: relative;
           margin-top: 250px;
+        }
+
+        #cplanframe {
+          width: 800px;
+          height: 500px;
+          margin-top: 100px;
+        }
+
+        #cplan {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: slategray;
+          padding: 20px;
+          padding-bottom: 50px;
+          margin-top: 50px;
+        }
+
+        #cplantitle {
+          margin-right: 80px;
+          color: white;
         }
         </style>
     </head>
@@ -75,7 +96,11 @@
         </div>
         <div id="busplan">
           <h3>Want to learn more? Take a look at our business plan.</h3>
-          <button id="bplan" href="https://docs.google.com/document/d/16FXE1nwFpQwdn_Buegt4DKOeRv2QPN-5HV241OjFVvM/edit">Business Plan</button>
+          <button id="bplan" href="https://docs.google.com/document/d/16FXE1nwFpQwdn_Buegt4DKOeRv2QPN-5HV241OjFVvM/edit"><strong>Business Plan</strong></button>
+        </div>
+        <div id="cplan">
+          <h3 id="cplantitle">4U's Contingency Plan</h3>
+          <iframe id="cplanframe" src="https://docs.google.com/spreadsheets/d/1bsIdrJ-s3ZmXjfX5shaIcz12Su-xNt5GZ5xHJJydWZc/edit#gid=0" title="4U Contingency Plan"></iframe>
         </div>
     </div>
    <script src="slideshow.js"></script>
