@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>
+            Team - 4U Flowers
+        </title>
+        <link rel="stylesheet" href="4usite.css">
+        <link rel="stylesheet" href="slideshow.css"/>
+        <style>
+
+        #navbar {
+          height: 100px;
+        }
+
+        .slidedeck {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 60%;
+        }
+
+        #busplan {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 300px;
+          margin-left: 15%;
+        }
+
+        #bplan {
+          padding: 20px;
+          font-size: 20pt;
+          color: rgb(161, 5, 5);
+          background-color: whitesmoke;
+          font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+          position: relative;
+          margin-top: 250px;
+        }
+        </style>
+    </head>
+    <body>
+      <div id="navbar">
+      <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            <a href="#!">Investor Relations</a>
+          </div>
+          <nav>
+            <div class="nav-mobile">
+              <a id="nav-toggle" href="#!"><span></span></a>
+            </div>
+            <ul class="nav-list">
+          
+              <li><a href="#!">Home</a></li>
+              <li><a href="#!">About</a></li>
+              <li><a href="#!">Services</a>
+              </li>
+              <li><a href="#!">Investor Relations</a></li>            
+              <li><a href="#!">Press</a></li>
+              <li><a href="#!">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </div>
+    <div id="page">
+      <div class="headerbar"><p class="subheader">Investor Relations</p></div>
+        <div class="slidedeck">
+          <ul id="slides">
+            <li class="slide showing"><img class="slidepic" src="Slide.png"></li>
+            <li class="slide"><img class="slidepic" src="Slide.png"></li>
+            <li class="slide"><img class="slidepic" src="Slide.png"></li>
+            <li class="slide"><img class="slidepic" src="Slide.png"></li>
+            <li class="slide"><img class="slidepic" src="Slide.png"></li>
+          </ul>
+        </div>
+        <div id="busplan">
+          <h3>Want to learn more? Take a look at our business plan.</h3>
+          <button id="bplan" href="https://docs.google.com/document/d/16FXE1nwFpQwdn_Buegt4DKOeRv2QPN-5HV241OjFVvM/edit">Business Plan</button>
+        </div>
+    </div>
+   <script src="slideshow.js"></script>
+    </body>
+</html>

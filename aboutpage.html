@@ -1,0 +1,590 @@
+<html>
+<head>
+    <title>Folia Home Page</title>
+
+</head>
+<style>
+.outercontainer{
+    height: 92vh;
+    width: 100vw;
+    background-image:url("flowerbg.png");
+
+    background-repeat: no-repeat;
+    background-size: 1800px 1000px;
+    background: cover;
+    padding-top: 10px;
+}
+
+#abouttext {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-style: italic;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+
+article {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.question {
+cursor: pointer;
+color: white;
+padding: 10px;
+font-size: 25px;
+}
+
+.answer {
+    /*display:none;*/
+    color: white;
+    padding: 15px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+#faqcontainer {
+    padding-top: 70px;
+    width: 100%;
+    background-image:url("orangeflower.jpg");
+    background-repeat: no-repeat;
+    background-size: 1800px 1000px;
+    height: 100vh;
+    width: 100vw;
+    background: cover;
+}
+
+#productcontainer {
+	padding-top: 10px;
+    width: 100%;
+    background-image:url("product.png");
+    background-repeat: no-repeat;
+    background-size: 1800px 1000px;
+    height: 105vh;
+    width: 100vw;
+    background: cover;
+}
+
+#title {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+}
+#headertext{
+    text-align: center;
+    font-size: 150px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    position: relative;
+    margin: auto;
+    top:320px;
+}
+#subheader{
+    text-align: center;
+    font-size: 50px;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    position: relative;
+    margin: auto;
+    top:330px;
+}
+#investorh1{
+    font-size: 40px;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    position: absolute;
+    left:30px;
+    top: 20px;
+}
+
+ .header, .footer {
+	 background: #2e2e2e;
+	 color: #fff;
+	 padding: 30px;
+	 text-align: center;
+}
+ .header a, .footer a {
+	 color: #fff;
+}
+ @media (min-width: 768px) {
+	 .header, .footer {
+		 padding: 100px 30px;
+	}
+}
+ .header h1, .footer h1 {
+	 font-size: 4em;
+	 font-weight: 300;
+}
+ .header i.fa, .footer i.fa {
+	 font-size: 4em;
+}
+ .header .bounce, .footer .bounce {
+	 -webkit-animation-name: bounce;
+	 animation-name: bounce;
+	 -webkit-transform-origin: center bottom;
+	 transform-origin: center bottom;
+	 animation-iteration-count: infinite;
+	 -webkit-animation-iteration-count: infinite;
+}
+ .header .animated, .footer .animated {
+	 -webkit-animation-duration: 2s;
+	 animation-duration: 2s;
+	 -webkit-animation-fill-mode: both;
+	 animation-fill-mode: both;
+}
+ .section {
+	 width: 100%;
+	 position: relative;
+}
+ .section .left, .section .middle, .section .right {
+	 width: 100%;
+	 display: block;
+	 color: #fff;
+	 box-sizing: border-box;
+	 left: 0;
+	 padding: 30px;
+	 text-align: center;
+	 overflow: hidden;
+	 -moz-transition: 0.3s ease-in-out all;
+	 -o-transition: 0.3s ease-in-out all;
+	 -webkit-transition: 0.3s ease-in-out all;
+	 transition: 0.3s ease-in-out all;
+}
+ @media (min-width: 480px) {
+	 .section .left .content, .section .middle .content, .section .right .content {
+		 position: relative;
+		 top: 50%;
+		 -webkit-transform: translateY(-50%);
+		 -ms-transform: translateY(-50%);
+		 transform: translateY(-50%);
+	}
+}
+ @media (min-width: 480px) {
+	 .section .left, .section .middle, .section .right {
+		 width: 50%;
+		 font-size: 0.9em;
+		 padding: 10px;
+		 left: 0;
+		 float: left;
+		 position: absolute;
+	}
+}
+ @media (min-width: 768px) {
+	 .section .left, .section .middle, .section .right {
+		 width: 33.33333%;
+		 left: 33.33%;
+		 padding: 10px;
+	}
+}
+ @media (min-width: 992px) {
+	 .section .left, .section .middle, .section .right {
+		 padding: 30px;
+		 font-size: 1em;
+	}
+}
+ .section.animate .left {
+	 left: 0;
+}
+ @media (min-width: 480px) {
+	 .section.animate .left {
+		 left: 50%;
+	}
+}
+ @media (min-width: 768px) {
+	 .section.animate .left {
+		 left: 0;
+	}
+}
+ .section.animate .right {
+	 left: 0;
+}
+ @media (min-width: 480px) {
+	 .section.animate .right {
+		 left: 50%;
+	}
+}
+ @media (min-width: 768px) {
+	 .section.animate .right {
+		 left: 66.66%;
+	}
+}
+ .section .title {
+	 background: rgb(205, 181, 177);
+}
+ .section .title h2 {
+	 margin-top: 0;
+}
+ .section .title p {
+	 line-height: 1.55em;
+	 margin-bottom: 0.75em;
+}
+ .section .title .btn-primary {
+	 color: rgb(0, 0, 0);
+	 background: #ebbdb5;
+	 padding: 10px;
+	 text-decoration: none;
+	 border-radius: 3px;
+	 display: inline-block;
+	 -moz-transition: 0.3s ease-in-out all;
+	 -o-transition: 0.3s ease-in-out all;
+	 -webkit-transition: 0.3s ease-in-out all;
+	 transition: 0.3s ease-in-out all;
+}
+ .section .title .btn-primary:hover {
+	 background: #8d8685;
+}
+ .section .tiles {
+	 padding: 0;
+	 background: rgb(255, 255, 255);
+	 clear: both;
+	 display: none;
+	 float: none;
+}
+ .section .tiles img {
+	 width: 50%;
+	 float: left;
+	 height: auto;
+	 opacity: 0.7;
+	 -moz-transition: 0.3s ease-in-out all;
+	 -o-transition: 0.3s ease-in-out all;
+	 -webkit-transition: 0.3s ease-in-out all;
+	 transition: 0.3s ease-in-out all;
+	 -webkit-filter: grayscale(100%);
+	 -moz-filter: grayscale(100%);
+	 -o-filter: grayscale(100%);
+}
+ .section .tiles img:hover {
+	 opacity: 1;
+	 -webkit-filter: grayscale(0%);
+	 -moz-filter: grayscale(0%);
+	 -o-filter: grayscale(0%);
+}
+ @media (min-width: 768px) {
+	 .section .tiles {
+		 display: block;
+	}
+}
+ .section .middle {
+	 background: slategray;
+	 z-index: 2;
+	 padding: 0;
+}
+ .section .middle img {
+	 width: 100%;
+	 height: auto;
+	 display: block;
+}
+ @-webkit-keyframes bounce {
+	 0%, 20%, 50%, 80%, 100% {
+		 -webkit-transform: translateY(0);
+	}
+	 40% {
+		 -webkit-transform: translateY(-20px);
+	}
+	 60% {
+		 -webkit-transform: translateY(-10px);
+	}
+}
+ @keyframes bounce {
+	 0%, 20%, 50%, 80%, 100% {
+		 transform: translateY(0);
+	}
+	 40% {
+		 transform: translateY(-20px);
+	}
+	 60% {
+		 transform: translateY(-10px);
+	}
+}
+ 
+
+.bottomcontainer{
+    position: relative;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    top: 620px;
+    background-color: azure;
+}
+
+nav {
+	 float: right;
+}
+ nav ul {
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+}
+ nav ul li {
+	 float: left;
+	 position: relative;
+}
+ nav ul li a {
+	 display: block;
+	 padding: 0 20px;
+	 line-height: 70px;
+	 background: #fff;
+	 color: #463f3f;
+	 text-decoration: none;
+}
+ nav ul li a:hover {
+	 background: #f2f2f2;
+	 color: #fb5958;
+}
+ nav ul li a:not(:only-child):after {
+	 padding-left: 4px;
+	 content: ' ▾';
+}
+ nav ul li ul li {
+	 min-width: 190px;
+}
+ nav ul li ul li a {
+	 padding: 15px;
+	 line-height: 20px;
+}
+ .nav-dropdown {
+	 position: absolute;
+	 z-index: 1;
+	 box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+	 display: none;
+}
+ .nav-mobile {
+	 display: none;
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 background: #fff;
+	 height: 70px;
+	 width: 70px;
+}
+ @media only screen and (max-width: 800px) {
+	 .nav-mobile {
+		 display: block;
+	}
+	 nav {
+		 width: 100%;
+		 padding: 70px 0 15px;
+	}
+	 nav ul {
+		 display: none;
+	}
+	 nav ul li {
+		 float: none;
+	}
+	 nav ul li a {
+		 padding: 15px;
+		 line-height: 20px;
+	}
+	 nav ul li ul li a {
+		 padding-left: 30px;
+	}
+}
+ #nav-toggle {
+	 position: absolute;
+	 left: 18px;
+	 top: 22px;
+	 cursor: pointer;
+	 padding: 10px 35px 16px 0px;
+}
+ #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	 cursor: pointer;
+	 border-radius: 1px;
+	 height: 5px;
+	 width: 35px;
+	 background: #463f3f;
+	 position: absolute;
+	 display: block;
+	 content: '';
+	 transition: all 300ms ease-in-out;
+}
+ #nav-toggle span:before {
+	 top: -10px;
+}
+ #nav-toggle span:after {
+	 bottom: -10px;
+}
+ #nav-toggle.active span {
+	 background-color: transparent;
+}
+ #nav-toggle.active span:before, #nav-toggle.active span:after {
+	 top: 0;
+}
+ #nav-toggle.active span:before {
+	 transform: rotate(45deg);
+}
+ #nav-toggle.active span:after {
+	 transform: rotate(-45deg);
+}
+ @media screen and (min-width: 800px) {
+	 .nav-list {
+		 display: block !important;
+	}
+}
+ .navigation {
+	 height: 70px;
+	 background: #fff;
+     position: sticky;
+}
+ .nav-container {
+	 max-width: 1000px;
+	 margin: 0 auto;
+}
+ .brand {
+	 position: absolute;
+	 left: 50px;
+	 line-height: 70px;
+	 text-transform: uppercase;
+	 font-size: 1.4em;
+}
+ .brand a, .brand a:visited {
+	 color: #463f3f;
+	 text-decoration: none;
+}
+.nav-list{
+  font-size:20px;
+  right: -340px;
+  position: relative;
+}
+ 
+
+</style>
+<body> 
+    <i class="fa fa-angle-down arrow"></i>
+    <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            <a href="#!">Investor Relations</a>
+          </div>
+          <nav>
+            <div class="nav-mobile">
+              <a id="nav-toggle" href="#!"><span></span></a>
+            </div>
+            <ul class="nav-list">
+          
+              <li><a href="#!">Home</a></li>
+              <li><a href="#!">About</a></li>
+              <li><a href="#!">Services</a>
+              </li>
+              <li><a href="#!">Investor Relations</a></li>            
+              <li><a href="#!">Press</a></li>
+              <li><a href="#!">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    <div class="outercontainer">
+      <div id="title"> About </div>
+      <div id="abouttext">4U is a flower delivery company with a focus on making flowers personal.</div>
+
+      </div>
+
+	  <div id="productcontainer"></div>
+
+      <div id="faqcontainer">
+        <article>
+            <div class="question">
+              What is 4U? 
+            </div><hr>
+  
+            <div class="answer">
+              4U is a flower delivery company with a focus on making flowers personal. See what the flowers will look like before they’re sent so the only surprise is that warm feeling of getting flowers!
+            </div>
+        </article> 
+  
+        <article>
+            <div class="question">
+              Why should I donate through 4U?
+            </div> <hr>
+  
+            <div class="answer">
+              We want to help Ukraine in the ways we know best, by directing our sales towards nonprofits that we believe in. Customers are also encouraged to donate directly to nonprofits that support Ukraine. Some of our favorites include Team Rubicon, Care, and Doctors Without Borders.
+            </div>
+          </article>
+  
+          <article>
+              <div class="question">
+                How do I know that my money is donated?
+              </div> <hr>
+    
+              <div class="answer">
+                We encourage all customers to follow us on our Instagram (@4you.flowers). We will be posting proof of our donations following March 28th.
+              </div>
+            </article>  
+  
+          <article>
+              <div class="question">
+                Can my flowers be delivered?
+              </div> <hr>
+    
+              <div class="answer">
+                At this time, we do not offer direct deliveries to recipient addresses. Customer’s are invited to pickup their order at one of our designated pickup locations.
+              </div>
+          </article> 
+  
+          <article>
+              <div class="question">
+                How is 4U different from other flower delivery services?
+              </div> <hr>
+    
+              <div class="answer">
+                We are a student-run company based at USC’s Iovine and Young Academy. During regular drops, we allow customers to include a personalized handwritten messages within the packaging of their flower. Their message will be reproduced, in the customer’s original, handwritten font.
+              </div>
+            </article> 
+ </div>
+       
+    </div>
+    
+
+ </div>
+ 
+ 
+    </div>
+
+
+
+
+    </div>
+
+
+
+<script>
+	jQuery(document).ready(function(){
+
+$("#faqcontainer").hide();
+
+$(".question").on("click", function(){
+	$("#answer").fadeIn(3000);
+});
+
+$("#question").on("mouseover", function(){
+	$(this).addClass("highlight");
+})
+
+$("#answer").on("mouseout", function(){
+	$(this).removeClass("highlight");
+})
+
+
+});
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
