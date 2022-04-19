@@ -6,10 +6,9 @@
         <link rel="stylesheet" href="4usite.css">
         <style>
         .column {
-            float: left;
-            width: 18%;
             margin-bottom: 16px;
             padding: 0 8px;
+            width: 360px;
         }
 
          @media screen and (max-width: 650px) {
@@ -43,7 +42,7 @@
             display: inline-block;
             padding: 8px;
             color: white;
-            background-color: #000;
+            background-color: #ebbdb5;
             text-align: center;
             cursor: pointer;
             width: 100%;
@@ -54,22 +53,22 @@
         }
 
         .teammemberpic {
-            width: 300px;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
             text-align: center;
             padding: auto;
         }
 
         .teamboxes {
           margin: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center; 
         }
 
         #navbar {
           height: 100px;
-        }
-
-        #meettheteam {
-          height: 300px;
-          background-color: #ebbdb5;
         }
         </style>
     </head>
@@ -99,9 +98,9 @@
       </section>
     </div>
     <div id="page">
-      <div id="meettheteam"><p class="subheader">Meet The Team</p></div>
+      <div class="headerbar"><p class="subheader">Meet The Team</p></div>
         <div class="teamboxes">
-            <div class="row">
+
                 <div class="column">
                   <div class="memberbox">
                     <img src="iris.png" alt="Iris Leung" class="teammemberpic">
@@ -110,24 +109,24 @@
                       <p class="title">Product Manager</p>
                       <p>Iris has experience with product design and graphic design.</p>
                       <p>icleung@usc.edu</p>
-                      <p><button class="emailbutton">Contact</button></p>
+                      <p><button class="emailbutton" href="mailto:icleung@usc.edu">Contact</button></p>
                     </div>
                   </div>
                 </div>
-                <div class="row">
+
                     <div class="column">
                       <div class="memberbox">
                         <img src="matt.png" alt="Matthew Suri" class="teammemberpic">
                         <div class="biocontainer">
-                          <h2>Mattew Suri</h2>
+                          <h2>Matthew Suri</h2>
                           <p class="title">Director of Growth and Media</p>
                           <p>Mattew has experience with social media and growth.</p>
                           <p>msuri@usc.edu</p>
-                          <p><button class="emailbutton">Contact</button></p>
+                          <p><button class="emailbutton" href="mailto:msuri@usc.edu">Contact</button></p>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+
                         <div class="column">
                           <div class="memberbox">
                             <img src="steven.png" alt="Steven Sun" class="teammemberpic">
@@ -136,11 +135,11 @@
                               <p class="title">Head UI/UX Designer and Product Assistant</p>
                               <p>Steven has experience in product design and UI/UX.</p>
                               <p>peiyisun@usc.edu</p>
-                              <p><button class="emailbutton">Contact</button></p>
+                              <p><button class="emailbutton" href="mailto:peiyisun@usc.edu">Contact</button></p>
                             </div>
                           </div>
                         </div>
-                        <div class="row">
+
                             <div class="column">
                               <div class="memberbox">
                                 <img src="ellie.png" alt="Eleanor Paik" class="teammemberpic">
@@ -149,11 +148,11 @@
                                   <p class="title">Head Multimedia Designer and Social Media Director</p>
                                   <p>Eleanor has design and art experience.</p>
                                   <p>egpaik@usc.edu</p>
-                                  <p><button class="emailbutton">Contact</button></p>
+                                  <p><button class="emailbutton" href="mailto:egpaik@usc.edu">Contact</button></p>
                                 </div>
                               </div>
                             </div>
-                            <div class="row">
+
                                 <div class="column">
                                   <div class="memberbox">
                                     <img src="ezra.png" alt="Ezra Bird" class="teammemberpic">
@@ -162,11 +161,10 @@
                                       <p class="title">Head Product Designer</p>
                                       <p>Ezra has experience with product design and making.</p>
                                       <p>ebird@usc.edu</p>
-                                      <p><button class="emailbutton">Contact</button></p>
+                                      <p><button class="emailbutton" href="mailto:ebird@usc.edu">Contact</button></p>
                                     </div>
                                   </div>
                                 </div>
         </div>
-      </div>
     </body>
 </html>
