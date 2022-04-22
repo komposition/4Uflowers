@@ -1,109 +1,304 @@
 <html>
-    <head>
-        <title>
-            Investor Relations - 4U Flowers
-        </title>
-        <link rel="stylesheet" href="4usite.css">
-        <link rel="stylesheet" href="slideshow.css"/>
-        <style>
 
-        #navbar {
-          height: 100px;
-        }
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>
+    Investor Relations - 4U Flowers
+  </title>
+  <link rel="stylesheet" href="4usite.css">
+  <link rel="stylesheet" href="slideshow.css" />
+  <style>
+    #navbar {
+      height: 100px;
+    }
 
-        .slidedeck {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-right: 60%;
-          
-        }
+    .slidedeck {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 60%;
 
-        #busplan {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 300px;
-          margin-left: 15%;
-        }
+    }
 
-        #bplan {
-          padding: 20px;
-          font-size: 20pt;
-          color: #ebbdb5;
-          background-color: whitesmoke;
-          font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-          position: relative;
-          margin-top: 250px;
-        }
+    #busplan {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 300px;
+      margin-left: 15%;
+    }
 
-        #cplanframe {
-          width: 800px;
-          height: 500px;
-          margin-top: 100px;
-        }
+    #bplan {
+      padding: 20px;
+      font-size: 20pt;
+      color: #ebbdb5;
+      background-color: whitesmoke;
+      font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+      position: relative;
+      margin-top: 250px;
+    }
 
-        #cplan {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: slategray;
-          padding: 20px;
-          padding-bottom: 50px;
-          margin-top: 50px;
-        }
+    #cplanframe {
+      width: 800px;
+      height: 500px;
+      margin-top: 100px;
+    }
 
-        #cplantitle {
-          margin-right: 80px;
-          color: white;
-        }
-        </style>
-    </head>
-    <body>
-      <div id="navbar">
-      <section class="navigation">
-        <div class="nav-container">
-          <div class="brand">
-            <a href="#!">Investor Relations</a>
+    #cplan {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: slategray;
+      padding: 20px;
+      padding-bottom: 50px;
+      margin-top: 50px;
+    }
+
+    #cplantitle {
+      margin-right: 80px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!">Investor Relations</a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
           </div>
-          <nav>
-            <div class="nav-mobile">
-              <a id="nav-toggle" href="#!"><span></span></a>
-            </div>
-            <ul class="nav-list">
-          
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Home</a></li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/aboutpage.html">About</a></li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uteam.html">Team</a>
-              </li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uinvestorrelations.html">Investor Relations</a></li>            
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/press.html">Press</a></li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-    </div>
-    <div id="page">
-      <div class="headerbar"><p class="subheader">Investor Relations</p></div>
-        <div class="slidedeck">
-          <ul id="slides">
-            <li class="slide showing"><img class="slidepic" src="Slide.png"></li>
-            <li class="slide"><img class="slidepic" src="Slide.png"></li>
-            <li class="slide"><img class="slidepic" src="Slide.png"></li>
-            <li class="slide"><img class="slidepic" src="Slide.png"></li>
-            <li class="slide"><img class="slidepic" src="Slide.png"></li>
+          <ul class="nav-list">
+
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Home</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/aboutpage.html">About</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uteam.html">Team</a>
+            </li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uinvestorrelations.html">Investor
+                Relations</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/press.html">Press</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/contact.html">Contact</a></li>
           </ul>
-        </div>
-        <div id="busplan">
-          <h3>Want to learn more? Take a look at our business plan.</h3>
-          <button id="bplan" href="https://docs.google.com/document/d/16FXE1nwFpQwdn_Buegt4DKOeRv2QPN-5HV241OjFVvM/edit"><strong>Business Plan</strong></button>
-        </div>
-        <div id="cplan">
-          <h3 id="cplantitle">4U's Contingency Plan</h3>
-          <iframe id="cplanframe" src="https://docs.google.com/spreadsheets/d/1bsIdrJ-s3ZmXjfX5shaIcz12Su-xNt5GZ5xHJJydWZc/edit#gid=0" title="4U Contingency Plan"></iframe>
-        </div>
+        </nav>
+      </div>
+    </section>
+  </div>
+  <div id="page">
+    <div class="headerbar">
+      <p class="subheader">Investor Relations</p>
     </div>
-   <script src="slideshow.js"></script>
-    </body>
+    <div class="slidedeck">
+      <ul id="slides">
+        <li class="slide showing"><img class="slidepic" src="Slide.png"></li>
+        <li class="slide"><img class="slidepic" src="Slide.png"></li>
+        <li class="slide"><img class="slidepic" src="Slide.png"></li>
+        <li class="slide"><img class="slidepic" src="Slide.png"></li>
+        <li class="slide"><img class="slidepic" src="Slide.png"></li>
+      </ul>
+    </div>
+    <div id="busplan">
+      <h3>Want to learn more? Take a look at our business plan.</h3>
+      <button id="bplan"
+        href="https://docs.google.com/document/d/16FXE1nwFpQwdn_Buegt4DKOeRv2QPN-5HV241OjFVvM/edit"><strong>Business
+          Plan</strong></button>
+    </div>
+    <div id="cplan">
+      <h3 id="cplantitle">4U's Contingency Plan</h3>
+      <iframe id="cplanframe"
+        src="https://docs.google.com/spreadsheets/d/1bsIdrJ-s3ZmXjfX5shaIcz12Su-xNt5GZ5xHJJydWZc/edit#gid=0"
+        title="4U Contingency Plan"></iframe>
+    </div>
+
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <select id="period">
+      <option>All Time</option>
+      <option value="3">Last 3 Months</option>
+      <option value="4">Last 4 Months</option>
+    </select>
+
+  </div>
+
+  <script src="slideshow.js"></script>
+
+  <script>
+
+    var chart;
+
+    const revenueSeries = [
+      {
+        date: new Date(2022, 0, 1),
+        value: 50000
+      },
+
+      {
+        date: new Date(2022, 1, 1),
+        value: 50000
+      },
+
+      {
+        date: new Date(2022, 2, 1),
+        value: 40000
+      },
+
+      {
+        date: new Date(2022, 3, 1),
+        value: 20000
+      },
+
+      {
+        date: new Date(2022, 4, 1),
+        value: 70000
+      },
+
+      {
+        date: new Date(2022, 5, 1),
+        value: 30000
+      },
+
+
+    ]
+
+    const grossProfitSeries = [
+      {
+        date: new Date(2022, 0, 1),
+        value: 30000
+      },
+
+      {
+        date: new Date(2022, 1, 1),
+        value: 10000
+      },
+
+      {
+        date: new Date(2022, 2, 1),
+        value: 5000
+      },
+
+      {
+        date: new Date(2022, 3, 1),
+        value: 7500
+      },
+
+      {
+        date: new Date(2022, 4, 1),
+        value: 2500
+      },
+
+      {
+        date: new Date(2022, 5, 1),
+        value: 10000
+      },
+
+
+    ]
+
+    const operatingProfitSeries = [
+      {
+        date: new Date(2022, 0, 1),
+        value: 1000
+      },
+
+      {
+        date: new Date(2022, 1, 1),
+        value: 1500
+      },
+
+      {
+        date: new Date(2022, 2, 1),
+        value: 2000
+      },
+
+      {
+        date: new Date(2022, 3, 1),
+        value: 2500
+      },
+
+      {
+        date: new Date(2022, 4, 1),
+        value: 3400
+      },
+
+      {
+        date: new Date(2022, 5, 1),
+        value: 2400
+      },
+
+
+    ]
+    function plot(months) {
+      const revenueChart =
+      {
+        label: 'Revenue',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(60, 60, 60)',
+        data: [],
+      }
+
+      const grossProfitChart =
+      {
+        label: 'Gross Profit',
+        backgroundColor: 'rgb(128, 128, 255)',
+        borderColor: 'rgb(128, 128, 255)',
+        data: [],
+      }
+
+      const operatingProfitChart =
+      {
+        label: 'Operating Profit',
+        backgroundColor: 'rgb(255, 187, 153)',
+        borderColor: 'rgb(255, 187, 153)',
+        data: [],
+      }
+
+      const labels = [
+      ]
+
+      for (var i = 0; i < revenueSeries.length; i++) {
+        if (!months || i + months >= revenueSeries.length) {
+          const revenue = revenueSeries[i]
+          const grossProfit = grossProfitSeries[i]
+          const operatingProfit = operatingProfitSeries[i]
+          revenueChart.data.push(revenue.value)
+          grossProfitChart.data.push(grossProfit.value)
+          operatingProfitChart.data.push(operatingProfit.value)
+          labels.push(revenue.date.getFullYear() + "/" + (revenue.date.getMonth() + 1))
+        }
+      }
+
+      const config = {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [revenueChart, grossProfitChart, operatingProfitChart]
+        },
+        options: {}
+      };
+      if (chart) {
+        chart.destroy()
+      }
+      chart = new Chart(
+        document.getElementById('myChart'),
+        config
+      );
+    }
+
+    plot()
+
+    $("#period").on("change", function () {
+      const value = $(this).val();
+      plot(+value)
+    })
+  </script>
+
+</body>
+
 </html>
