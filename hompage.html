@@ -177,7 +177,7 @@
 	}
 }
  .section .title {
-	 background: rgb(205, 181, 177);
+	 background: #cdb5b1;
 }
  .section .title h2 {
 	 margin-top: 0;
@@ -471,7 +471,7 @@ nav {
  
  <div class="section">
     <div class="middle">
-       <img src="Iris.png" />
+       <img src="iris1.png" />
     </div>
     <div class="right title">
        <div class="content">
@@ -482,10 +482,10 @@ nav {
     </div>
     
     <div class="left tiles">
-       <img src="Ellie.png" />
-       <img src="Ezra.png" />
-       <img src="Steven.png" />
-       <img src="Matt.png" />
+       <img src="ellie1.png" />
+       <img src="ezra1.png" />
+       <img src="steven1.png" />
+       <img src="matt1.png" />
     </div>
     
  </div>
@@ -552,63 +552,76 @@ nav {
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
 <script>
-    var arrowBounce = function() {
-  var arrow = $(".arrow");
-  
-  if (arrow.hasClass("lift")) {
-    arrow.removeClass("lift");
-  } else {
-    arrow.addClass("lift");
-  }
-};
-
-// run the arrowBounce function every 800ms
-setInterval(arrowBounce, 800);
-</script>
-<script>
 $(document).ready(function(){
 
-    var $sm = 480;
-    var $md = 768;
- 
-    function resizeThis() {
-       $imgH = $('.middle img').width();
-       if ($(window).width() >= $sm) {
-          $('.left,.right,.section').css('height', $imgH);
-       } else {
-          $('.left,.right,.section').css('height', 'auto');
-       }
-    }
- 
-    resizeThis();
- 
-    $(window).resize(function(){
-       resizeThis();
-    });
- 
-    $(window).scroll(function() {
-       $('.section').each(function(){
-          var $elementPos = $(this).offset().top;
-          var $scrollPos = $(window).scrollTop();
- 
-          var $sectionH = $(this).height();
-          var $h = $(window).height();
-          var $sectionVert = (($h/2)-($sectionH/3));
- 
- 
-          if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
-             $(this).addClass('animate');
-          } else {
-             $(this).removeClass('animate');
-          }
-       });
-    });
- 
-    $('.btn-primary').click(function(){
-       alert('I lied');
-    });
- });
- 
+var $sm = 480;
+var $md = 768;
+
+function resizeThis() {
+   $imgH = $('.middle img').width();
+   if ($(window).width() >= $sm) {
+	  $('.left,.right,.section').css('height', $imgH);
+   } else {
+	  $('.left,.right,.section').css('height', 'auto');
+   }
+}
+
+resizeThis();
+
+$(window).resize(function(){
+   resizeThis();
+});
+
+$(window).scroll(function() {
+   $('.section').each(function(){
+	  var $elementPos = $(this).offset().top;
+	  var $scrollPos = $(window).scrollTop();
+
+	  var $sectionH = $(this).height();
+	  var $h = $(window).height();
+	  var $sectionVert = (($h/2)-($sectionH/4));
+
+
+	  if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
+		 $(this).addClass('animate');
+	  } else {
+		 $(this).removeClass('animate');
+	  }
+   });
+});
+
+$('.btn-primary').click(function(){
+   alert('I lied');
+});
+});
+
+$(function() {
+$('a[href*="#"]:not([href="#"])').click(function() {
+ if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+   var target = $(this.hash);
+   target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+   if (target.length) {
+	 $('html, body').animate({
+	   scrollTop: target.offset().top
+	 }, 1000);
+	 return false;
+   }
+ }
+});
+});
+
+
+
+</script>
+
+
+
+
+
+
+
+
+<script>
  $(function() {
    $('a[href*="#"]:not([href="#"])').click(function() {
      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
