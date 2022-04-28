@@ -1,0 +1,384 @@
+<html>
+<head>
+    <title>4You Market Opportunity</title>
+
+</head>
+<style>
+body{
+    background-color: #cdb5b1;
+}
+#headertext{
+    text-align: center;
+    font-size: 75px;
+    color:black;
+    position: relative;
+    margin: auto;
+    top:50px;
+}
+nav {
+	 float: right;
+}
+ nav ul {
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+}
+ nav ul li {
+	 float: left;
+	 position: relative;
+}
+ nav ul li a {
+	 display: block;
+	 padding: 0 20px;
+	 line-height: 70px;
+	 background: #fff;
+	 color: #463f3f;
+	 text-decoration: none;
+}
+ nav ul li a:hover {
+	 background: #f2f2f2;
+	 color: #fb5958;
+}
+ nav ul li a:not(:only-child):after {
+	 padding-left: 4px;
+	 content: ' ▾';
+}
+ nav ul li ul li {
+	 min-width: 190px;
+}
+ nav ul li ul li a {
+	 padding: 15px;
+	 line-height: 20px;
+}
+ .nav-dropdown {
+	 position: absolute;
+	 z-index: 1;
+	 box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+	 display: none;
+}
+ .nav-mobile {
+	 display: none;
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 background: #fff;
+	 height: 70px;
+	 width: 70px;
+}
+ @media only screen and (max-width: 800px) {
+	 .nav-mobile {
+		 display: block;
+	}
+	 nav {
+		 width: 100%;
+		 padding: 70px 0 15px;
+	}
+	 nav ul {
+		 display: none;
+	}
+	 nav ul li {
+		 float: none;
+	}
+	 nav ul li a {
+		 padding: 15px;
+		 line-height: 20px;
+	}
+	 nav ul li ul li a {
+		 padding-left: 30px;
+	}
+}
+ #nav-toggle {
+	 position: absolute;
+	 left: 18px;
+	 top: 22px;
+	 cursor: pointer;
+	 padding: 10px 35px 16px 0px;
+}
+ #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	 cursor: pointer;
+	 border-radius: 1px;
+	 height: 5px;
+	 width: 35px;
+	 background: #463f3f;
+	 position: absolute;
+	 display: block;
+	 content: '';
+	 transition: all 300ms ease-in-out;
+}
+ #nav-toggle span:before {
+	 top: -10px;
+}
+ #nav-toggle span:after {
+	 bottom: -10px;
+}
+ #nav-toggle.active span {
+	 background-color: transparent;
+}
+ #nav-toggle.active span:before, #nav-toggle.active span:after {
+	 top: 0;
+}
+ #nav-toggle.active span:before {
+	 transform: rotate(45deg);
+}
+ #nav-toggle.active span:after {
+	 transform: rotate(-45deg);
+}
+ @media screen and (min-width: 800px) {
+	 .nav-list {
+		 display: block !important;
+	}
+}
+ .navigation {
+	 height: 70px;
+	 background: #fff;
+     position: sticky;
+}
+ .nav-container {
+	 max-width: 1000px;
+	 margin: 0 auto;
+}
+ .brand {
+	 position: absolute;
+	 left: 50px;
+	 line-height: 70px;
+	 text-transform: uppercase;
+	 font-size: 1.4em;
+}
+ .brand a, .brand a:visited {
+	 color: #463f3f;
+	 text-decoration: none;
+}
+.nav-list{
+  font-size:20px;
+  right: -340px;
+  position: relative;
+}
+#header{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+#summary{
+    text-align: left;
+    position: absolute;
+    font-size: 18px;
+    width:400px;
+    height: 550px;
+    top:250px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    left: 400px;
+    border:black 2px solid;
+}
+#uscmarket{
+    width:400px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    left: 900px;
+    top: 330px;
+    border:black 2px solid;
+}
+
+#buslaunch{
+    border:black 2px solid;
+    background-color:#ffffff;
+    border-radius: 15px;
+    width: 150px;
+    height: 2px;
+    position: relative;
+    left: 1070px;
+    top: 572px;
+    font-size: 15px;
+    padding:20px;
+    text-align: center;
+}
+#launch{
+    margin-top:-7px;
+}
+#funding{
+    margin-top:-7px;
+}
+#future{
+    margin-top:-7px;
+}
+
+#buslaunch:hover{
+    border:black 2px solid;
+    background-color:#9e9393;
+    backdrop-filter:(4px);
+  
+}
+#fundingprop{
+    border:black 2px solid;
+    background-color:#ffffff;
+    border-radius: 15px;
+    width: 150px;
+    height: 2px;
+    position: relative;
+    left: 1300px;
+    top: 526px;
+    font-size: 15px;
+    padding:20px;
+    text-align: center;
+}
+#fundingprop:hover{
+    border:black 2px solid;
+    background-color:#9e9393;
+    backdrop-filter:(4px);
+  
+}
+#futuresteps{
+    border:black 2px solid;
+    background-color:#ffffff;
+    border-radius: 15px;
+    width: 150px;
+    height: 2px;
+    position: relative;
+    left: 1520px;
+    top: 480px;
+    font-size: 15px;
+    padding:20px;
+    text-align: center;
+}
+#futuresteps:hover{
+    border:black 2px solid;
+    background-color:#9e9393;
+    backdrop-filter:(4px);
+  
+}
+
+</style>
+<body> 
+    <i class="fa fa-angle-down arrow"></i>
+    <section class="navigation">
+        <div class="nav-container">
+			<div class="brand">
+				<a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Investor Relations</a>
+			  </div>
+			  <nav>
+				<div class="nav-mobile">
+				  <a id="nav-toggle" href="#!"><span></span></a>
+				</div>
+				<ul class="nav-list">
+			  
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Home</a></li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/aboutpage.html">About</a></li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uteam.html">Team</a>
+				  </li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uinvestorrelations.html">Investor Relations</a></li>            
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/press.html">Press</a></li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/contact.html">Contact</a></li>
+				</ul>
+          </nav>
+        </div>
+      </section>
+    <div class="outercontainer">
+      
+        <div id="headertext">
+           Market Opportunity
+        </div>
+        <br><br>
+        <div id="summary">
+            <div id="header">Summary</div>
+            <br>
+            It's hard for college students to find affordable gifts to show those they care about their appreciation. They want something simple and easy 
+            to convey their feelings without the extra work.
+
+                   </div>
+        <div id="image">
+        <img src="product.png" id="uscmarket">
+        <br>
+        
+       </div>
+      
+       <br><br>
+    <div class="bottomcontainer">
+
+
+                   </div>
+        
+       <div id="buslaunch">
+        <div id="launch">Business Launch </div>
+        <br>        
+       </div>
+
+       <div id="fundingprop">
+        <div id="funding">Funding Proposition </div>
+        <br>        
+       </div>
+
+       <div id="futuresteps">
+        <div id="future">Future Steps </div>
+        <br>        
+       </div>
+  
+      </div>  
+
+
+    
+ </div>
+ 
+ 
+    </div>
+
+    
+
+
+    </div>
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+<script>
+  
+ 
+ $(function() {
+   $('a[href*="#"]:not([href="#"])').click(function() {
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+       var target = $(this.hash);
+       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+       if (target.length) {
+         $('html, body').animate({
+           scrollTop: target.offset().top
+         }, 1000);
+         return false;
+       }
+     }
+   });
+ });
+</script>
+<script>
+    (function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+</script>
+
+
+</body>
+
+
+
+</html>
