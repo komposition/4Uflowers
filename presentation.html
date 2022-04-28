@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <title>Folia Presentation Page</title>
+    <style>
+        .grid-animation {
+            position: relative;
+            width: calc(80vh * 9 / 16);
+            height: 80vh;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .grid-animation {
+                width: 80vw;
+                height: calc(80vw * 16 / 9);
+            }
+        }
+
+        .grid-animation video {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .button-wrapper {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .grid-animation button {
+            margin: 0 auto;
+            display: block;
+            border: 2px solid #121212;
+            background-color: white;
+            border-radius: 40px;
+            font-size: 40px;
+            padding: 20px;
+            color: #121212;
+        }
+    </style>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+    <script>
+        function createFadeIn(index, callback) {
+            return new Promise((resolve) => {
+                $(`#video${index}`).trigger("play")
+                $(`#video${index}`).animate({ opacity: 1 }, 750, () => {
+                    if (index < 8) {
+                        setTimeout(() => {
+                            $(`#video${index}`).trigger("pause")
+                        }, 500)
+                    }
+                    resolve()
+                })
+            })
+
+        }
+        function moveVideo(index, callback) {
+            return new Promise((resolve) => {
+                $(`#video${index}`).trigger("play")
+                var left;
+                if (index % 3 === 1) {
+                    left = "33.3%"
+                }
+                if (index % 3 === 2) {
+                    left = "66.6%"
+                }
+                var top;
+                if (index > 2) {
+                    top = "33.3%"
+                }
+                if (index > 5) {
+                    top = "66.6%"
+                }
+                $(`#video${index}`).animate({ width: "33.3%", height: "33.3%", left: left, top: top }, 1000, () => {
+                    setTimeout(() => {
+                        $(`#video${index}`).trigger("pause")
+                    }, 500)
+                    resolve()
+                })
+            })
+
+        }
+        async function startPresentation() {
+            await createFadeIn(0)
+            await createFadeIn(1)
+            await createFadeIn(2)
+            await createFadeIn(3)
+            await createFadeIn(4)
+            await createFadeIn(5)
+            //$("#music").trigger("play");
+            await createFadeIn(6)
+            await createFadeIn(7)
+            await createFadeIn(8)
+            await moveVideo(8)
+            await moveVideo(7)
+            await moveVideo(6)
+            await moveVideo(5)
+            await moveVideo(4)
+            await moveVideo(3)
+            await moveVideo(2)
+            await moveVideo(1)
+            await moveVideo(0)
+            $("video").click(function () {
+                const video = $(this).get(0)
+                if (video.paused) {
+                    video.play()
+                } else {
+                    video.pause()
+                }
+            })
+
+        }
+        $(document).ready(() => {
+            for (var index = 0; index <= 8; index++) {
+                $("#grid").append(`<video preload="auto" muted loop id="video${index}">
+            <source src="videos/${index}.mp4" type="video/mp4">
+        </video>`)
+            }
+            $("#startbutton").click(function () {
+                $(this).hide()
+                startPresentation()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="grid-animation" id="grid">
+        <div class="button-wrapper">
+            <button id="startbutton">Start</button>
+        </div>
+    </div>
+
+    <audio id="music">
+        <source type="audio/mp3" src="videos/audio0.mp3" />
+    </audio>
+</body>
+
+</html>

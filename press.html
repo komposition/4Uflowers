@@ -1,295 +1,355 @@
 <html>
+
 <head>
-    <title>Folia Press Page</title>
+  <title>Folia Press Page</title>
 
 </head>
 <style>
-.navbox {
-    position:absolute;
+  .navbox {
+    position: absolute;
     z-index: 99;
-}
-nav {
+  }
+
+  nav {
     position: relative;
-     width: 3200px;
-}
- nav ul {
-	 list-style: none;
-	 margin: 0;
-	 padding: 0;
-}
- nav ul li {
-	 float: left;
-	 position: relative;
-}
- nav ul li a {
-	 display: block;
-	 padding: 0 20px;
-	 line-height: 70px;
-	 background: #fff;
-	 color: #463f3f;
-	 text-decoration: none;
-}
- nav ul li a:hover {
-	 background: #f2f2f2;
-	 color: #fb5958;
-}
- nav ul li a:not(:only-child):after {
-	 padding-left: 4px;
-	 content: ' ▾';
-}
- nav ul li ul li {
-	 min-width: 190px;
-}
- nav ul li ul li a {
-	 padding: 15px;
-	 line-height: 20px;
-}
- .nav-dropdown {
-	 position: absolute;
-	 z-index: 1;
-	 box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-	 display: none;
-}
- .nav-mobile {
-	 display: none;
-	 position: absolute;
-	 top: 0;
-	 right: 0;
-	 background: #fff;
-	 height: 70px;
-	 width: 70px;
-}
- @media only screen and (max-width: 800px) {
-	 .nav-mobile {
-		 display: block;
-	}
-	 nav {
-		 width: 100%;
-		 padding: 70px 0 15px;
-	}
-	 nav ul {
-		 display: none;
-	}
-	 nav ul li {
-		 float: none;
-	}
-	 nav ul li a {
-		 padding: 15px;
-		 line-height: 20px;
-	}
-	 nav ul li ul li a {
-		 padding-left: 30px;
-	}
-}
- #nav-toggle {
-	 position: absolute;
-	 left: 18px;
-	 top: 22px;
-	 cursor: pointer;
-	 padding: 10px 35px 16px 0px;
-}
- #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-	 cursor: pointer;
-	 border-radius: 1px;
-	 height: 5px;
-	 width: 35px;
-	 background: #463f3f;
-	 position: absolute;
-	 display: block;
-	 content: '';
-	 transition: all 300ms ease-in-out;
-}
- #nav-toggle span:before {
-	 top: -10px;
-}
- #nav-toggle span:after {
-	 bottom: -10px;
-}
- #nav-toggle.active span {
-	 background-color: transparent;
-}
- #nav-toggle.active span:before, #nav-toggle.active span:after {
-	 top: 0;
-}
- #nav-toggle.active span:before {
-	 transform: rotate(45deg);
-}
- #nav-toggle.active span:after {
-	 transform: rotate(-45deg);
-}
- @media screen and (min-width: 800px) {
-	 .nav-list {
-		 display: block !important;
-	}
-}
- .navigation {
-	 height: 70px;
-	 background: #fff;
-     position: sticky;
-     left:-9px;
-}
- .nav-container {
-	 max-width: 1000px;
-	 margin: 0 auto;
-}
- .brand {
-	 position: absolute;
-	 left: 50px;
-	 line-height: 70px;
-	 text-transform: uppercase;
-	 font-size: 1.4em;
-}
- .brand a, .brand a:visited {
-	 color: #463f3f;
-	 text-decoration: none;
-}
-.nav-list{
-  font-size:20px;
-  right: -1030px;
-  position: relative;
-}
-.navigation{
-    position:absolute;
+    width: 3200px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    float: left;
+    position: relative;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #fff;
+    color: #463f3f;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    background: #f2f2f2;
+    color: #fb5958;
+  }
+
+  nav ul li a:not(:only-child):after {
+    padding-left: 4px;
+    content: ' ▾';
+  }
+
+  nav ul li ul li {
+    min-width: 190px;
+  }
+
+  nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+
+  .nav-dropdown {
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    height: 70px;
+    width: 70px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .nav-mobile {
+      display: block;
+    }
+
+    nav {
+      width: 100%;
+      padding: 70px 0 15px;
+    }
+
+    nav ul {
+      display: none;
+    }
+
+    nav ul li {
+      float: none;
+    }
+
+    nav ul li a {
+      padding: 15px;
+      line-height: 20px;
+    }
+
+    nav ul li ul li a {
+      padding-left: 30px;
+    }
+  }
+
+  #nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #463f3f;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+
+  #nav-toggle span:before {
+    top: -10px;
+  }
+
+  #nav-toggle span:after {
+    bottom: -10px;
+  }
+
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+
+  #nav-toggle.active span:before,
+  #nav-toggle.active span:after {
+    top: 0;
+  }
+
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+
+  #nav-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+
+  @media screen and (min-width: 800px) {
+    .nav-list {
+      display: block !important;
+    }
+  }
+
+  .navigation {
+    height: 70px;
+    background: #fff;
+    position: sticky;
+    left: -9px;
+  }
+
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    position: absolute;
+    left: 50px;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+  }
+
+  .brand a,
+  .brand a:visited {
+    color: #463f3f;
+    text-decoration: none;
+  }
+
+  .nav-list {
+    font-size: 20px;
+    right: -1030px;
+    position: relative;
+  }
+
+  .navigation {
+    position: absolute;
     width: 1210px;
-    top:-10px;
+    top: -10px;
 
-}
+  }
 
-main {
-  max-width: 800px;
-  width: 90vw;
-  /* display the anchor links in a grid */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 150px);
-  grid-auto-rows: 240px;
-  /* center the content horizontally & vertically */
-  justify-content: center;
-  align-content: center;
-  grid-auto-flow: dense;
-}
+  main {
+    max-width: 800px;
+    width: 90vw;
+    /* display the anchor links in a grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-auto-rows: 240px;
+    /* center the content horizontally & vertically */
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: dense;
+  }
 
-main a {
-  overflow: hidden;
-}
+  main a {
+    overflow: hidden;
+  }
 
-main a:nth-of-type(2) {
-  grid-column: span 2;
-}
-main a:nth-of-type(5) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-main a:nth-of-type(7) {
-  grid-row: span 2;
-}
+  main a:nth-of-type(2) {
+    grid-column: span 2;
+  }
 
-main a:focus {
-  outline: none;
-}
-main img {
-  object-fit: cover;
-  display: block;
-  width: 100%;
-  height: 100%;
-  filter: brightness(0.6);
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transform: scale(1);
-}
-main a:focus img,
-main a:hover img {
-  transform: scale(1.1);
-  filter: brightness(1);
-}
+  main a:nth-of-type(5) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 
-.div {
+  main a:nth-of-type(7) {
+    grid-row: span 2;
+  }
+
+  main a:focus {
+    outline: none;
+  }
+
+  main img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.6);
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform: scale(1);
+  }
+
+  main a:focus img,
+  main a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1);
+  }
+
+  .div {
     position: relative;
     top: 70px;
-    margin:auto;
+    margin: auto;
     left: 510px;
-    
-}
-body{
-    background-color: bisque;
-    width:100%;
-    position:fixed;
-}
 
-#press{
+  }
+
+  body {
+    background-color: bisque;
+    width: 100%;
+    position: fixed;
+  }
+
+  #press {
     font-size: 70px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:black;
-    text-align:center;
+    color: black;
+    text-align: center;
     position: relative;
     right: 500px;
-}
+  }
 
+  .grid-animation {
+    position: relative;
+
+  }
 </style>
+
 <body>
-    <div class="navbox">
+  <div class="navbox">
     <section class="navigation">
-        <div class="nav-container">
-          <div class="brand">
-            <a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Investor Relations</a>
-          </div>
-          <nav>
-            <div class="nav-mobile">
-              <a id="nav-toggle" href="#!"><span></span></a>
-            </div>
-            <ul class="nav-list">
-          
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Home</a></li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/aboutpage.html">About</a></li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uteam.html">Team</a>
-              </li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uinvestorrelations.html">Investor Relations</a></li>            
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/press.html">Press</a></li>
-              <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/contact.html">Contact</a></li>
-            </ul>
-          </nav>
+      <div class="nav-container">
+        <div class="brand">
+          <a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Investor Relations</a>
         </div>
-    </div>
-      </section>
-      <div class="div">
-          <div id="press">Media & Press</div>
-        <main>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="bagflower.png" alt="A dog gazing at the sky and at a promising future. Or a nearby squirrel." />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="team.png" alt="A bulldog with a lot of moxie" />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="powerflower.png" alt="A daring dog carrying a flower between its romantic fangs" />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="yellowwall.png" alt="A cuddly young pup with a sassy red collar" />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="valentineflower.png" alt="An extremely active dog jumping between the ocean's waves" />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="website.png" alt="Two dogs cheerfully hopping along a beaten path. At least one of them is." />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="skyflower.png" alt="A dog diligently sitting and waiting for someone special, with a welcoming flower" />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="A carefree dog licking its nose in a rather blurry picture" />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/">
-            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="A smart, glass-wearing dog resting on an open book" />
-          </a>
-          <a href="https://www.instagram.com/4you.flowers/" target="_blank">
-            <img src="buyflower.png" alt="Two curious dogs looking above with great expectations" />
-          </a>
-        </main>
-        
-        <!-- display an arbitrary picture in a div container
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Home</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/aboutpage.html">About</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uteam.html">Team</a>
+            </li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uinvestorrelations.html">Investor
+                Relations</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/press.html">Press</a></li>
+            <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+  </section>
+  <div class="div">
+    <div id="press">Media & Press</div>
+    <main>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="bagflower.png" alt="A dog gazing at the sky and at a promising future. Or a nearby squirrel." />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="team.png" alt="A bulldog with a lot of moxie" />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="powerflower.png" alt="A daring dog carrying a flower between its romantic fangs" />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="yellowwall.png" alt="A cuddly young pup with a sassy red collar" />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="valentineflower.png" alt="An extremely active dog jumping between the ocean's waves" />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="website.png" alt="Two dogs cheerfully hopping along a beaten path. At least one of them is." />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="skyflower.png"
+          alt="A dog diligently sitting and waiting for someone special, with a welcoming flower" />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img
+          src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt="A carefree dog licking its nose in a rather blurry picture" />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/">
+        <img
+          src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt="A smart, glass-wearing dog resting on an open book" />
+      </a>
+      <a href="https://www.instagram.com/4you.flowers/" target="_blank">
+        <img src="buyflower.png" alt="Two curious dogs looking above with great expectations" />
+      </a>
+    </main>
+
+    <!-- display an arbitrary picture in a div container
         the idea is to show the the container as a modal, on top of the existing content
         
           -->
-       
-        </div>
+
+    <div class="grid-animation">
+      <video autoplay muted width="320" height="240">
+        <source src="BG.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+
 </body>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -298,85 +358,86 @@ body{
 
 
 <script>
-    (function($) { // Begin jQuery
-  $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      // Close one dropdown when selecting another
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
-    });
-    // Hamburger to X toggle
-    $('#nav-toggle').on('click', function() {
-      this.classList.toggle('active');
-    });
-  }); // end DOM ready
-})(jQuery); // end jQuery
+  (function ($) { // Begin jQuery
+    $(function () { // DOM ready
+      // If a link has a dropdown, add sub menu toggle.
+      $('nav ul li a:not(:only-child)').click(function (e) {
+        $(this).siblings('.nav-dropdown').toggle();
+        // Close one dropdown when selecting another
+        $('.nav-dropdown').not($(this).siblings()).hide();
+        e.stopPropagation();
+      });
+      // Clicking away from dropdown will remove the dropdown class
+      $('html').click(function () {
+        $('.nav-dropdown').hide();
+      });
+      // Toggle open and close nav styles on click
+      $('#nav-toggle').click(function () {
+        $('nav ul').slideToggle();
+      });
+      // Hamburger to X toggle
+      $('#nav-toggle').on('click', function () {
+        this.classList.toggle('active');
+      });
+    }); // end DOM ready
+  })(jQuery); // end jQuery
 </script>
 <script>
-     (function($) { // Begin jQuery
-  $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      // Close one dropdown when selecting another
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
-    });
-    // Hamburger to X toggle
-    $('#nav-toggle').on('click', function() {
-      this.classList.toggle('active');
-    });
-  }); // end DOM ready
-})(jQuery);
+  (function ($) { // Begin jQuery
+    $(function () { // DOM ready
+      // If a link has a dropdown, add sub menu toggle.
+      $('nav ul li a:not(:only-child)').click(function (e) {
+        $(this).siblings('.nav-dropdown').toggle();
+        // Close one dropdown when selecting another
+        $('.nav-dropdown').not($(this).siblings()).hide();
+        e.stopPropagation();
+      });
+      // Clicking away from dropdown will remove the dropdown class
+      $('html').click(function () {
+        $('.nav-dropdown').hide();
+      });
+      // Toggle open and close nav styles on click
+      $('#nav-toggle').click(function () {
+        $('nav ul').slideToggle();
+      });
+      // Hamburger to X toggle
+      $('#nav-toggle').on('click', function () {
+        this.classList.toggle('active');
+      });
+    }); // end DOM ready
+  })(jQuery);
 
-const links = document.querySelectorAll('a');
-const overlay = document.querySelector('div');
+  const links = document.querySelectorAll('a');
+  const overlay = document.querySelector('div');
 
-// following a click event on the links show the overlay
-function showOverlay() {
-  // use the src & alt attribute of the selected image in the overlay
-  const src = this.querySelector('img').getAttribute('src');
-  const alt = this.querySelector('img').getAttribute('alt');
-  overlay.querySelector('img').setAttribute('src', src);
-  overlay.querySelector('img').setAttribute('alt', alt);
+  // following a click event on the links show the overlay
+  function showOverlay() {
+    // use the src & alt attribute of the selected image in the overlay
+    const src = this.querySelector('img').getAttribute('src');
+    const alt = this.querySelector('img').getAttribute('alt');
+    overlay.querySelector('img').setAttribute('src', src);
+    overlay.querySelector('img').setAttribute('alt', alt);
 
-  overlay.classList.add('overlay');
+    overlay.classList.add('overlay');
 
-  // to remove the anchor links from reach set the tabindex attribute to a negative value
-  links.forEach(link => link.setAttribute('tabindex', -1));
-}
-
-links.forEach(link => link.addEventListener('click', showOverlay));
-
-// following a click event on the overlay, consider if the click was registered on the button
-// if so hide the overlay back
-function hideOverlay(e) {
-  if (e.target.tagName === 'BUTTON') {
-    overlay.classList.remove('overlay');
-    // restore the default value of the anchor links
-    links.forEach(link => link.setAttribute('tabindex', 0));
+    // to remove the anchor links from reach set the tabindex attribute to a negative value
+    links.forEach(link => link.setAttribute('tabindex', -1));
   }
-}
 
-overlay.addEventListener('click', hideOverlay);
+  links.forEach(link => link.addEventListener('click', showOverlay));
+
+  // following a click event on the overlay, consider if the click was registered on the button
+  // if so hide the overlay back
+  function hideOverlay(e) {
+    if (e.target.tagName === 'BUTTON') {
+      overlay.classList.remove('overlay');
+      // restore the default value of the anchor links
+      links.forEach(link => link.setAttribute('tabindex', 0));
+    }
+  }
+
+  overlay.addEventListener('click', hideOverlay);
 
 </script>
+
 </html>
