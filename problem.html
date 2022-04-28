@@ -1,0 +1,405 @@
+<html>
+<head>
+    <title>Folia Problem & Solution</title>
+
+</head>
+<style>
+body{
+    background-color: #cdb5b1;
+}
+#headertext{
+    text-align: center;
+    font-size: 75px;
+    color:black;
+    position: relative;
+    margin: auto;
+    top:50px;
+}
+nav {
+	 float: right;
+}
+ nav ul {
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+}
+ nav ul li {
+	 float: left;
+	 position: relative;
+}
+ nav ul li a {
+	 display: block;
+	 padding: 0 20px;
+	 line-height: 70px;
+	 background: #fff;
+	 color: #463f3f;
+	 text-decoration: none;
+}
+ nav ul li a:hover {
+	 background: #f2f2f2;
+	 color: #fb5958;
+}
+ nav ul li a:not(:only-child):after {
+	 padding-left: 4px;
+	 content: ' ▾';
+}
+ nav ul li ul li {
+	 min-width: 190px;
+}
+ nav ul li ul li a {
+	 padding: 15px;
+	 line-height: 20px;
+}
+ .nav-dropdown {
+	 position: absolute;
+	 z-index: 1;
+	 box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+	 display: none;
+}
+ .nav-mobile {
+	 display: none;
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 background: #fff;
+	 height: 70px;
+	 width: 70px;
+}
+ @media only screen and (max-width: 800px) {
+	 .nav-mobile {
+		 display: block;
+	}
+	 nav {
+		 width: 100%;
+		 padding: 70px 0 15px;
+	}
+	 nav ul {
+		 display: none;
+	}
+	 nav ul li {
+		 float: none;
+	}
+	 nav ul li a {
+		 padding: 15px;
+		 line-height: 20px;
+	}
+	 nav ul li ul li a {
+		 padding-left: 30px;
+	}
+}
+ #nav-toggle {
+	 position: absolute;
+	 left: 18px;
+	 top: 22px;
+	 cursor: pointer;
+	 padding: 10px 35px 16px 0px;
+}
+ #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	 cursor: pointer;
+	 border-radius: 1px;
+	 height: 5px;
+	 width: 35px;
+	 background: #463f3f;
+	 position: absolute;
+	 display: block;
+	 content: '';
+	 transition: all 300ms ease-in-out;
+}
+ #nav-toggle span:before {
+	 top: -10px;
+}
+ #nav-toggle span:after {
+	 bottom: -10px;
+}
+ #nav-toggle.active span {
+	 background-color: transparent;
+}
+ #nav-toggle.active span:before, #nav-toggle.active span:after {
+	 top: 0;
+}
+ #nav-toggle.active span:before {
+	 transform: rotate(45deg);
+}
+ #nav-toggle.active span:after {
+	 transform: rotate(-45deg);
+}
+ @media screen and (min-width: 800px) {
+	 .nav-list {
+		 display: block !important;
+	}
+}
+ .navigation {
+	 height: 70px;
+	 background: #fff;
+     position: sticky;
+}
+ .nav-container {
+	 max-width: 1000px;
+	 margin: 0 auto;
+}
+ .brand {
+	 position: absolute;
+	 left: 50px;
+	 line-height: 70px;
+	 text-transform: uppercase;
+	 font-size: 1.4em;
+}
+ .brand a, .brand a:visited {
+	 color: #463f3f;
+	 text-decoration: none;
+}
+.nav-list{
+  font-size:20px;
+  right: -340px;
+  position: relative;
+}
+#prob1{
+    text-align: center;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+}
+#problem{
+    border:black 6px solid;
+    background-color:#ffffff;
+    width: 600px;
+    height: 200px;
+    margin: 50px;
+    position: relative;
+    left: 180px;
+    font-size: 20px;
+    padding:20px;
+    text-align: center;
+}
+#problem:hover{
+    border:black 6px solid;
+    background-color:#9e9393;
+    backdrop-filter:(4px);
+  
+}
+#sol1{
+    text-align: center;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+}
+#solution{
+    border:black 6px solid;
+    background-color:#ffffff;
+    width: 600px;
+    height: 200px;
+    margin: 50px;
+    float:right;
+    position: relative;
+    top:-352px;
+    left:-180px;
+    font-size: 20px;
+    padding:20px;
+    font-weight: 300;
+    text-align: center;
+}
+#solution:hover{
+    border:black 6px solid;
+    background-color:#9e9393;
+    backdrop-filter:(4px);
+  
+}
+ 
+
+</style>
+<body> 
+    <i class="fa fa-angle-down arrow"></i>
+    <section class="navigation">
+        <div class="nav-container">
+			<div class="brand">
+				<a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Investor Relations</a>
+			  </div>
+			  <nav>
+				<div class="nav-mobile">
+				  <a id="nav-toggle" href="#!"><span></span></a>
+				</div>
+				<ul class="nav-list">
+			  
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Home</a></li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/aboutpage.html">About</a></li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uteam.html">Team</a>
+				  </li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uinvestorrelations.html">Investor Relations</a></li>            
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/press.html">Press</a></li>
+				  <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/contact.html">Contact</a></li>
+				</ul>
+          </nav>
+        </div>
+      </section>
+    <div class="outercontainer">
+      
+        <div id="headertext">
+           Problem & Solution
+        </div>
+        <br><br>
+        <div id="problem">
+            <div id="prob1">Problem</div>
+            <br>
+            It's hard for college students to find affordable gifts to show those they care about their appreciation. They want something simple and easy 
+            to convey their feelings without the extra work.
+
+                   </div>
+        
+       <div id="solution">
+        <div id="sol1">Solution</div>
+        <br>
+        4You Flowers aims to be an affordable flower company dedicated to helping collge students show their appreciation for others through specialized packaging with a custom engraved note along side the flowers. Not only do
+        we offer flowers but also a quicky delivery service to meet our customers needs.
+        
+       </div>
+       <br><br>
+    <div class="bottomcontainer">
+
+
+    
+ </div>
+ 
+ 
+    </div>
+
+     
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+<script>
+    var arrowBounce = function() {
+  var arrow = $(".arrow");
+  
+  if (arrow.hasClass("lift")) {
+    arrow.removeClass("lift");
+  } else {
+    arrow.addClass("lift");
+  }
+};
+
+// run the arrowBounce function every 800ms
+setInterval(arrowBounce, 800);
+</script>
+<script>
+$(document).ready(function(){
+
+    var $sm = 480;
+    var $md = 768;
+ 
+    function resizeThis() {
+       $imgH = $('.middle img').width();
+       if ($(window).width() >= $sm) {
+          $('.left,.right,.section').css('height', $imgH);
+       } else {
+          $('.left,.right,.section').css('height', 'auto');
+       }
+    }
+ 
+    resizeThis();
+ 
+    $(window).resize(function(){
+       resizeThis();
+    });
+ 
+    $(window).scroll(function() {
+       $('.section').each(function(){
+          var $elementPos = $(this).offset().top;
+          var $scrollPos = $(window).scrollTop();
+ 
+          var $sectionH = $(this).height();
+          var $h = $(window).height();
+          var $sectionVert = (($h/2)-($sectionH/3));
+ 
+ 
+          if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
+             $(this).addClass('animate');
+          } else {
+             $(this).removeClass('animate');
+          }
+       });
+    });
+ 
+    $('.btn-primary').click(function(){
+       alert('I lied');
+    });
+ });
+ 
+ $(function() {
+   $('a[href*="#"]:not([href="#"])').click(function() {
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+       var target = $(this.hash);
+       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+       if (target.length) {
+         $('html, body').animate({
+           scrollTop: target.offset().top
+         }, 1000);
+         return false;
+       }
+     }
+   });
+ });
+</script>
+<script>
+    (function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+</script>
+
+
+</body>
+
+
+
+</html>
