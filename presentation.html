@@ -50,11 +50,11 @@
         function createFadeIn(index, callback) {
             return new Promise((resolve) => {
                 $(`#video${index}`).trigger("play")
-                $(`#video${index}`).animate({ opacity: 1 }, 750, () => {
+                $(`#video${index}`).animate({ opacity: 1 }, 3000, () => {
                     if (index < 8) {
                         setTimeout(() => {
                             $(`#video${index}`).trigger("pause")
-                        }, 500)
+                        }, 250)
                     }
                     resolve()
                 })
@@ -88,18 +88,21 @@
 
         }
         async function startPresentation() {
+            $("#audio1").trigger("play");
             await createFadeIn(0)
             await createFadeIn(1)
+            $("#audio2").trigger("play");
             await createFadeIn(2)
             await createFadeIn(3)
             await createFadeIn(4)
+            $("#audio3").trigger("play");
             await createFadeIn(5)
-            //$("#music").trigger("play");
             await createFadeIn(6)
             await createFadeIn(7)
             await createFadeIn(8)
             await moveVideo(8)
             await moveVideo(7)
+            $("#audio4").trigger("play");
             await moveVideo(6)
             await moveVideo(5)
             await moveVideo(4)
@@ -138,8 +141,20 @@
         </div>
     </div>
 
-    <audio id="music">
-        <source type="audio/mp3" src="videos/audio0.mp3" />
+    <audio id="audio1">
+        <source type="audio/mp3" src="videos/audio1.mp3" />
+    </audio>
+
+    <audio id="audio2">
+        <source type="audio/mp3" src="videos/audio2.mp3" />
+    </audio>
+
+    <audio id="audio3">
+        <source type="audio/mp3" src="videos/audio3.mp3" />
+    </audio>
+
+    <audio id="audio4">
+        <source type="audio/mp3" src="videos/audio4.mp3" />
     </audio>
 </body>
 
