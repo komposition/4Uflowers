@@ -1,0 +1,396 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>
+        Shopping Cart - 4U Flowers
+    </title>
+    <link rel="stylesheet" href="4usite.css">
+    <style>
+        #navbar {
+            height: 100px;
+        }
+
+        .slidedeck {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 60%;
+
+        }
+
+        #busplan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 300px;
+            margin-left: 15%;
+        }
+
+        #bplan {
+            padding: 20px;
+            font-size: 20pt;
+            color: #ebbdb5;
+            background-color: whitesmoke;
+            font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+            position: relative;
+            margin-top: 250px;
+        }
+
+        #cplanframe {
+            width: 800px;
+            height: 500px;
+            margin-top: 100px;
+        }
+
+        #cplan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: slategray;
+            padding: 20px;
+            padding-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        #cplantitle {
+            margin-right: 80px;
+            color: white;
+        }
+
+        .column {
+            margin-bottom: 16px;
+            padding: 0 8px;
+            width: 360px;
+        }
+
+        .cartimg {
+            width: 100%;
+        }
+
+        #cartshop {
+            width: 4%;
+            position: fixed;
+            z-index: 3;
+            right: 4%;
+            top: 1%;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 200px;
+        }
+
+        #cart {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: white;
+            opacity: 0.8;
+            margin-left: 100px;
+            text-align: center;
+            color: black;
+            font-size: 16pt;
+        }
+
+        .move-to-left {
+            right: 0;
+            transition: 2s;
+            z-index: 2;
+            height: 100%;
+            width: 25%;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .memberbox {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .biocontainer {
+            padding: 0 16px;
+        }
+
+        .biocontainer::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .product {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #ebbdb5;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .product:hover {
+            background-color: #555;
+        }
+
+        .teammemberpic {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            text-align: center;
+            padding: auto;
+        }
+
+        .teamboxes {
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #navbar {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="#!">Shopping Cart</a>
+                </div>
+                <nav>
+                    <div class="nav-mobile">
+                        <a id="nav-toggle" href="#!"><span></span></a>
+                    </div>
+                    <ul class="nav-list">
+
+                        <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/hompage.html">Home</a></li>
+                        <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/aboutpage.html">About</a>
+                        </li>
+                        <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uteam.html">Team</a>
+                        </li>
+                        <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/4uinvestorrelations.html">Investor
+                                Relations</a></li>
+                        <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/press.html">Press</a></li>
+                        <li><a href="http://webdev.iyaclasses.com/~jamessw/acad275/4Uflowers/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div id="cartshop">
+                        <img class="cartimg" src="shoppingcart.png" alt="cart">
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </div>
+    <div id="page">
+        <div class="headerbar">
+            <p class="subheader">Shop 4U</p>
+        </div>
+        <div class="teamboxes">
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Product - Blush Carnations.png" alt="Blush Carnations" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Blush Carnations</h2>
+                        <p class="title"><em>Dianthus caryophyllus</em></p>
+                        <p>Blush Carnations are cultivated for its fringe-petaled flowers, popular in the floral
+                            industry.</p>
+                        <p><button class="product" data-productName="Blush Carnations">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Product - Red Carnations.png" alt="Red Carnations" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Red Carnations</h2>
+                        <p class="title"><em>Dianthus caryophyllus</em></p>
+                        <p>ADD TEXT HERE</p>
+                        <p><button class="product" data-productName="Red Carnations">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Product - Yellow Carnations.png" alt="Yellow Carnations" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Yellow Carnations</h2>
+                        <p class="title"><em>Dianthus caryophyllus</em></p>
+                        <p>ADD TEXT HERE</p>
+                        <p><button class="product" data-productName="Yellow Carnations">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Product - Red Roses.png" alt="Red Roses" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Red Roses</h2>
+                        <p class="title"><em>Rosa Amadeus</em></p>
+                        <p>ADD TEXT HERE</p>
+                        <p><button class="product" data-productName="Red Roses">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Product - White Pom Poms.png" alt="White Pom Poms" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>White Pom Poms</h2>
+                        <p class="title"><em>Viburnum opulus cv.</em></p>
+                        <p>ADD TEXT HERE</p>
+                        <p><button class="product" data-productName="White Pom">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Box - Blush Carnations.png" alt="Box - Blush Carnations" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Box - Blush Carnations</h2>
+                        <p class="title"><em>High Quality Custom Packaging</em></p>
+                        <p>Profesionally designed, aesthetic packaging that provides optimal flower delivery and
+                            preservation.</p>
+                        <p><button class="product" data-productName="Box - Red Roses">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Box - Red Carnations.png" alt="Box - Red Carnations" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Box - Red Carnations</h2>
+                        <p class="title"><em>High Quality Custom Packaging</em></p>
+                        <p>Profesionally designed, aesthetic packaging that provides optimal flower delivery and
+                            preservation.</p>
+                        <p><button class="product" data-productName="Box - Red Roses">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Box - White Pom Poms.png" alt="Box - White Pom Poms" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Box - White Pom Poms</h2>
+                        <p class="title"><em>High Quality Custom Packaging</em></p>
+                        <p>Profesionally designed, aesthetic packaging that provides optimal flower delivery and
+                            preservation.</p>
+                        <p><button class="product" data-productName="Box - White Pom Poms">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Box - Red Roses.png" alt="Box - Red Roses" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Box - Red Roses</h2>
+                        <p class="title"><em>High Quality Custom Packaging</em></p>
+                        <p>Profesionally designed, aesthetic packaging that provides optimal flower delivery and
+                            preservation.</p>
+                        <p><button class="product" data-productName="Box - Red Roses">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="memberbox">
+                    <img src="Box - Yellow Carnations.png" alt="Box - Yellow Carnations" class="teammemberpic">
+                    <div class="biocontainer">
+                        <h2>Box - Yellow Carnations</h2>
+                        <p class="title"><em>High Quality Custom Packaging</em></p>
+                        <p>Profesionally designed, aesthetic packaging that provides optimal flower delivery and
+                            preservation.</p>
+                        <p><button class="product" data-productName="Box - Red Roses">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cart" hidden>
+                ~Your Cart Is Currently Empty~
+            </div>
+
+        </div>
+
+        <script>
+
+            const PRODUCTS = [
+                {
+                    name: "Marigold",
+                    price: "8",
+                    desc: "It's a flower",
+                },
+                {
+                    name: "Red Carnations",
+                    price: "8",
+                    desc: "It's a flower",
+                },
+                {
+                    name: "Red Roses",
+                    price: "8",
+                    desc: "It's a flower",
+                },
+            ];
+
+            let cart = [];
+            console.log(cart);
+            if (JSON.parse(localStorage.getItem("cart"))) {
+                $("#cart").html(cart);
+            }
+            else {
+                localStorage.setItem("cart", JSON.stringify(cart))
+            }
+            $(".product").on("click", function () {
+                cart = JSON.parse(localStorage.getItem("cart"))
+                cart.push($(this).attr("data-productName"));
+                console.log(cart);
+                localStorage.setItem("cart", JSON.stringify(cart))
+                $("#cart").html(cart);
+
+
+                // for (i = 0; i < cart.length; i++) {
+                //   $(".cart").html()
+                // }
+            });
+        </script>
+
+        <script>
+
+            function toggleCart() {
+                $("cartshop").toggleClass("move-to-left");
+            }
+
+
+            $("#cartshop").on("click", function () {
+                alert("Working")
+                $("#cart").attr("hidden", false);
+                toggleCart();
+            })
+        </script>
+</body>
+
+</html>

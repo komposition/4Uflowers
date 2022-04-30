@@ -1,0 +1,38 @@
+<div style="padding: 30px">
+    <h1><em>Your Shopping Cart</em></h1>
+    <div id="cart">~Your Cart Is Currently Empty~</div>
+  </div>
+
+  <script>
+    const PRODUCTS = [
+      {
+        name: "Marigold",
+        price: "8",
+        desc: "It's a flower",
+      },
+      {
+        name: "Red Carnations",
+        price: "8",
+        desc: "It's a flower",
+      },
+      {
+        name: "Red Roses",
+        price: "8",
+        desc: "It's a flower",
+      },
+    ];
+
+    let cart = [];
+    console.log(cart);
+
+    $(".product").on("click", function () {
+      cart.push($(this).attr("data-productName"));
+      console.log(cart);
+
+      $("#cart").html(cart);
+
+      // for (i = 0; i < cart.length; i++) {
+      //   $(".cart").html()
+      // }
+    });
+  </script>

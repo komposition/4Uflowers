@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="product" data-productName="Marigold">Marigold</div>
+    <div class="product" data-productName="Red Carnations">Red Carnations</div>
+    <div class="product" data-productName="Red Roses">Red Roses</div>
+    <div style="padding-top: 30px">
+      Cart
+      <div class="cart"></div>
+    </div>
+
+    <script>
+      const PRODUCTS = [
+        {
+          name: "Marigold",
+          price: "8",
+          desc: "It's a flower",
+        },
+        {
+          name: "Red Carnations",
+          price: "8",
+          desc: "It's a flower",
+        },
+        {
+          name: "Red Roses",
+          price: "8",
+          desc: "It's a flower",
+        },
+      ];
+
+      let cart = [];
+      console.log(cart);
+
+      $(".product").on("click", function () {
+        cart.push($(this).attr("data-productName"));
+        console.log(cart);
+
+        $(".cart").html(cart);
+
+        // for (i = 0; i < cart.length; i++) {
+        //   $(".cart").html()
+        // }
+      });
+    </script>
+  </body>
+</html>
